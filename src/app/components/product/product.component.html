@@ -49,7 +49,12 @@
           </div>
         </div>
         <div class="button-container">
-          <button class="btn rounded-pill font-weight-bold cart-button" (click)=addToCart(item)><i class="fas fa-cart-plus"></i> | ${{item.price}}</button>
+          <button class="btn rounded-pill font-weight-bold cart-button d-flex" (click)=addToCart(item)>
+            <i class="fas fa-cart-plus m-auto cart-buy"></i>
+            <i class="fa-brands fa-shopify m-auto cart-add"></i>
+            <p class="m-auto cart-add"> Added</p>
+            <p class="m-auto cart-buy"> |  ${{item.price}}</p>
+          </button>
         </div>
       </div>
     </ng-container>

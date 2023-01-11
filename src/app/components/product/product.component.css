@@ -97,6 +97,7 @@ ngb-rating span{
 .cart-button{
   border-color: #279991;
   width: 130px;
+  height: 45px;
   margin: auto;
   font-weight: bold;
   border-width: 2px;
@@ -105,6 +106,26 @@ ngb-rating span{
 .cart-button:hover{
   background-color: #279991;
 }
+
+.cart-button:focus{
+  background-color: #279991;
+}
+
+.cart-button:focus p{
+  display: none;
+}
+
+.cart-add{
+  display: none;
+}
+
+.cart-button:focus .cart-buy{
+  display: none;
+}
+.cart-button:focus .cart-add{
+  display: flex;
+}
+
 
 
 
