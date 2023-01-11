@@ -1,0 +1,57 @@
+<div class="card-top container-fluid ">
+  <div class="container-fluid d-flex overflow-auto">
+    <div class="item">
+      <a (click)="filter('')" >
+        <img src="https://cdn-icons-png.flaticon.com/64/3788/3788126.png" alt="">
+        <h6>All products</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('clothing')">
+        <img src="https://cdn-icons-png.flaticon.com/64/821/821528.png" alt="">
+        <h6>Clothing</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('shoes')">
+        <img src="https://cdn-icons-png.flaticon.com/512/3289/3289150.png" alt="">
+        <h6>Shoes</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('accessories')">
+        <img src="https://cdn-icons-png.flaticon.com/512/1502/1502412.png" alt="">
+        <h6>Accessories</h6>
+      </a>
+    </div>
+    <div class="item">
+      <a (click)="filter('jewelry')">
+        <img src="https://cdn-icons-png.flaticon.com/64/2806/2806130.png" alt="">
+        <h6>Jewelry</h6>
+      </a>
+    </div>
+  </div>
+</div>
+<hr class="m-2">
+<div class="container-fluid mt-2">
+  <div class="row d-flex justify-content-around">
+    <ng-container *ngFor="let item of filterCategory | filter: searchKey:'name'">
+      <div class="card col-md-3">
+        <div class="img-container">
+          <img src="{{item.image}}" alt="">
+        </div>
+        <div class="text-container">
+          <h5 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch" ngbTooltip={{item.title}} triggers="mouseenter:mouseleave" placement="bottom">{{item.title}}</h5>
+          <p style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch; color: gray">{{item.seller}}</p>
+          <div class="d-flex flex-column">
+            <ngb-rating  class="justify-content-center" [max]="5" [(rate)]="item.rating" [readonly]="true"></ngb-rating>
+            <p class="justify-content-center m-auto p-1">{{item.reviews}} Reviews</p>
+          </div>
+        </div>
+        <div class="button-container">
+          <button class="btn rounded-pill font-weight-bold cart-button" (click)=addToCart(item)><i class="fas fa-cart-plus"></i> | ${{item.price}}</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

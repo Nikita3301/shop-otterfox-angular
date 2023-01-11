@@ -1,0 +1,137 @@
+.card-top{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  /*background-clip: border-box;*/
+  /*border: 1px solid black;*/
+  /*border-radius: 0 ;*/
+}
+
+.item img{
+  display: block;
+  width: 64px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+.item{
+  display: table;
+  text-align: center;
+  margin: 5px 10px;
+  width: 116px;
+  border-radius: .375rem;
+  padding: 5px 15px;
+  border: 1px solid gray;
+}
+.item h6{
+  height: 30px;
+  display: flex;
+  align-items : center;
+  justify-content : center;
+}
+
+.item:hover a{
+  color: #6cccc4;
+}
+
+.item:hover{
+  transition: 0.2s ease-in-out;
+  background-color: #191919;
+  border-color: #6cccc4;
+  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+}
+.item:hover img{
+  transition: 0.2s ease-in-out;
+  filter: invert(80%) sepia(72%) saturate(271%) hue-rotate(112deg) brightness(85%) contrast(86%);
+}
+
+.card{
+  margin: 10px;
+  width: 252px;
+  padding: 0;
+  min-height: 400px;
+  justify-content: space-between;
+}
+.img-container{
+  width: 250px;
+  height: 300px;
+  padding: 0;
+  margin: auto;
+  background: #fff;
+  overflow: hidden;
+}
+.text-container{
+  padding: 10px 15px 0;
+}
+
+
+ngb-rating{
+  display: flex;
+  font-size: 24px;
+  color: #279991;
+  margin: auto;
+  justify-content: center;
+}
+
+ngb-rating span{
+  margin: auto;
+}
+
+.button-container{
+  padding: 15px;
+  margin: auto;
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+  transform: scale(1);
+}
+.card img:hover{
+  transform: scale(1.3);
+}
+
+.cart-button{
+  border-color: #279991;
+  width: 130px;
+  margin: auto;
+  font-weight: bold;
+  border-width: 2px;
+}
+
+.cart-button:hover{
+  background-color: #279991;
+}
+
+
+
+
+@media (max-width: 765px){
+  .item{
+    margin: 10px 5px 15px;
+    padding: 10px;
+  }
+  .item a{
+    min-width: 120px;
+  }
+
+  container-fluid{
+    margin-top: 0;
+  }
+
+  hr{
+    display: none;
+  }
+  .item h6{
+    margin: auto;
+  }
+  .item img{
+    display: none;
+    width: 32px;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+}
