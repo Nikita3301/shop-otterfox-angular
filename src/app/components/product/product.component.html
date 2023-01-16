@@ -35,7 +35,7 @@
 <hr class="m-2">
 <div class="container-fluid mt-2">
   <div class="row d-flex justify-content-around">
-    <ng-container *ngFor="let item of filterCategory | filter: searchKey:'name'">
+    <ng-container *ngFor="let item of filterCategory | filter: searchKey:'title'">
       <div class="card col-md-3">
         <div class="img-container">
           <img src="{{item.image}}" alt="">
