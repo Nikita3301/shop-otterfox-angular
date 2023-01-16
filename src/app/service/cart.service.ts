@@ -51,8 +51,6 @@ export class CartService {
   clearCart() {
     this.cartItemList = [];
     this.productList.next(this.cartItemList)
-
-
     localStorage.removeItem("cart_items")
   }
 

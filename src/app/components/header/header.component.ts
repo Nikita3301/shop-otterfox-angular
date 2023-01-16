@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit{
 
   ngOnInit(): void {
     console.log(this.cartService.getItems())
+    this.cartService.loadCart();
       this.cartService.getProducts().subscribe((res:any)=>{
         this.totalItem=(res || []).length;
       })
