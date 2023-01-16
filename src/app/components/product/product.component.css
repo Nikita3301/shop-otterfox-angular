@@ -39,7 +39,9 @@
   transition: 0.2s ease-in-out;
   background-color: #191919;
   border-color: #6cccc4;
-  box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;
+  box-shadow: 0 0.5em 0.5em -0.4em;
+  transform: translateY(-0.25em);
+  /*box-shadow: rgba(99, 99, 99, 0.2) 0 2px 8px 0;*/
 }
 .item:hover img{
   transition: 0.2s ease-in-out;
