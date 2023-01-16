@@ -33,7 +33,6 @@ export class ProductComponent implements OnInit{
   }
 
   addToCart(item:any) {
-
     this.cartComponent.addToCart(item);
   }
 

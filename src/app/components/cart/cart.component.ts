@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {CartService} from "../../service/cart.service";
 import {ApiService} from "../../service/api.service";
-
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
@@ -10,6 +9,8 @@ import {ApiService} from "../../service/api.service";
 export class CartComponent implements OnInit{
 
   public products: any = [];
+
+  public loading = false;
 
   // public grandTotal !: number;
 
@@ -44,9 +45,9 @@ export class CartComponent implements OnInit{
   }
 
   //----- clear cart item
-  clearCart(products:any) {
+  clearCart() {
     // this.items.forEach((item, index) => this.cartService.removeItem(index));
-    this.cartService.clearCart(products);
+    this.cartService.clearCart();
     this.products = [...this.cartService.getItems()];
   }
 
@@ -56,11 +57,12 @@ export class CartComponent implements OnInit{
       this.products = [...this.cartService.getItems()];
   }
 
-
-
-  // removeItemf(item:any){
-  //   this.cartService.removeCartItem(item);
-  //   console.log("item: ", item);
+  // checkout(){
+  //   this.loading = true;
+  //   setTimeout(() => {
+  //     this.clearCart(this.products)
+  //   }, 1000);
+  //
   // }
 
 

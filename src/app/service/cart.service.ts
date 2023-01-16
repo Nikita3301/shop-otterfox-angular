@@ -6,13 +6,14 @@ import {BehaviorSubject} from "rxjs";
 })
 export class CartService {
 
-  public cartItemList: any =[]
+  public cartItemList: any = []
   public productList = new BehaviorSubject<any>([])
   public search = new BehaviorSubject<string>("");
 
   constructor() { }
 
   addToCart(addedItem:any) {
+    this.cartItemList = this.cartItemList || []
     this.cartItemList.push(addedItem);
     this.productList.next(this.cartItemList)
 
@@ -47,7 +48,7 @@ export class CartService {
     localStorage.setItem('cart_items', JSON.stringify(this.cartItemList));
   }
 
-  clearCart(products:any) {
+  clearCart() {
     this.cartItemList = [];
     this.productList.next(this.cartItemList)
 
