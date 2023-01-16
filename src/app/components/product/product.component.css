@@ -107,6 +107,8 @@ ngb-rating span{
 
 .cart-button:hover{
   background-color: #279991;
+  box-shadow: 0 0.5em 0.5em -0.4em;
+  transform: translateY(-0.25em);
 }
 
 .cart-button:focus{
@@ -127,9 +129,6 @@ ngb-rating span{
 .cart-button:focus .cart-add{
   display: flex;
 }
-
-
-
 
 
 @media (max-width: 765px){
