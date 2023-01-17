@@ -109,6 +109,9 @@
   .total h5{
     margin: auto;
   }
+  .container-fluid > .card{
+    margin: 10px;
+  }
 
 
 }
