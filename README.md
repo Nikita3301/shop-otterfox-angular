@@ -1,6 +1,6 @@
 # OtterFox Shop - Angular E-commerce Project
 
-![OtterFox Logo](https://cdn-icons-png.flaticon.com/512/2611/2611879.png)
+![OtterFox Logo](https://cdn-icons-png.flaticon.com/256/2611/2611879.png)
 
 An Angular e-commerce application that allows users to browse products, filter by categories, search for specific items, and manage a shopping cart.
 
