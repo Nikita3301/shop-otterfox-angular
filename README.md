@@ -1,27 +1,73 @@
-# App
+# OtterFox Shop - Angular E-commerce Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+![OtterFox Logo](https://cdn-icons-png.flaticon.com/512/2611/2611879.png)
 
-## Development server
+An Angular e-commerce application that allows users to browse products, filter by categories, search for specific items, and manage a shopping cart.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Product Catalog:** Browse and search through products
+- **Category Filtering:** Filter products by category (clothing, shoes, accessories, jewelry)
+- **Search Functionality:** Search products by name
+- **Shopping Cart:** Add, remove items, and view total price
+- **Responsive Design:** Works on mobile and desktop devices
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installation and Setup
 
-## Build
+1. Clone the repository:
+```
+git clone https://github.com/Nikita3301/shop-otterfox-angular.git
+cd shop-otterfox-angular
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Install dependencies:
+```
+npm install
+```
 
-## Running unit tests
+3. Run the development server:
+```
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. Open your browser and navigate to `http://localhost:4200/`
+## Live Demo
 
-## Running end-to-end tests
+Experience the application without installation:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-badge-id/deploy-status)](https://shop-otterfox.netlify.app/)
 
-## Further help
+* View and interact with the full application 
+* Test all features in real-time
+* No login required to browse products
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Access the demo: [https://shop-otterfox.netlify.app/](https://shop-otterfox.netlify.app/)
+
+## Technologies Used
+
+- Angular 15
+- TypeScript
+- RxJS
+- Bootstrap 5
+- ng-bootstrap
+- Font Awesome
+- Local Storage for cart persistence
+
+## Project Structure
+
+```
+shop_otterfox/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── cart/         # Cart component
+│   │   │   ├── header/       # Header with search and cart icon
+│   │   │   ├── product/      # Product listing and filtering
+│   │   ├── service/
+│   │   │   ├── api.service.ts    # Product data fetching
+│   │   │   ├── cart.service.ts   # Cart management
+│   │   ├── shared/
+│   │   │   ├── filter.pipe.ts    # Filter pipe for search
+│   ├── assets/               # Static assets
+│   ├── environments/         # Environment configuration
+```
