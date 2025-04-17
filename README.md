@@ -35,8 +35,6 @@ ng serve
 
 Experience the application without installation:
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-badge-id/deploy-status)](https://shop-otterfox.netlify.app/)
-
 * View and interact with the full application 
 * Test all features in real-time
 * No login required to browse products
